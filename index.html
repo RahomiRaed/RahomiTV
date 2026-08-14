@@ -3,27 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>تحميل تطبيق GO TV MAX</title>
+
     <meta name="description" content="قم بتحميل GO TV MAX اخر اصدار لمشاهدة القنوات والمباريات. حمل تطبيق كو تيفي ماكس (GO TV MAX) واستمتع بمشاهدة مبارياتك المفضلة أينما كنت.">
+
     <meta name="keywords" content="تحميل go tv max, go tv max اخر اصدار, تحميل كو تيفي ماكس, تطبيق go tv max, مشاهدة مباريات, go tv max للاندرويد, تحميل كو تيفي ماكس للشاشات">
-    
-    <!-- أيقونة الموقع الجاهزة -->
+
+    <!-- أيقونة الموقع -->
     <link rel="icon" href="https://l.top4top.io/p_3819hsuay0.png" type="image/png">
     <link rel="shortcut icon" href="https://l.top4top.io/p_3819hsuay0.png" type="image/png">
     <link rel="apple-touch-icon" href="https://l.top4top.io/p_3819hsuay0.png">
-    
+
+    <!-- الخط -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <style>
+
         :root {
-            --bg-gradient: radial-gradient(circle at top, #062b17 0%, #010b06 50%, #000000 100%);
+            --bg-gradient: radial-gradient(
+                circle at top,
+                #062b17 0%,
+                #010b06 50%,
+                #000000 100%
+            );
+
             --card-bg: #042112;
+
             --text-main: #ffffff;
+
             --text-muted: #94a3b8;
+
             --accent-color: #10b981;
+
             --accent-hover: #059669;
         }
+
 
         * {
             margin: 0;
@@ -32,271 +50,588 @@
             font-family: 'Cairo', sans-serif;
         }
 
-        body { 
-            background: var(--bg-gradient); 
-            background-attachment: fixed; 
-            color: var(--text-main); 
-            line-height: 1.6; 
-            min-height: 100vh; 
-            display: flex; 
-            flex-direction: column; 
-            align-items: center; 
+
+        body {
+
+            background: var(--bg-gradient);
+
+            background-attachment: fixed;
+
+            color: var(--text-main);
+
+            line-height: 1.6;
+
+            min-height: 100vh;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
         }
+
 
         .hero {
+
             text-align: center;
+
             padding: 30px 20px 40px;
+
             width: 100%;
+
             max-width: 800px;
+
         }
-        
+
+
         .logo-wrapper {
+
             width: 100%;
+
             display: flex;
+
             justify-content: flex-end;
-            margin-bottom: 0px;
+
+            margin-bottom: 0;
+
             padding-left: 15px;
+
         }
-        
+
+
         .top-logo {
+
             width: 75px;
+
             height: auto;
+
             border-radius: 12px;
+
             box-shadow: 0 4px 25px rgba(16, 185, 129, 0.2);
+
         }
+
 
         .gradient-title {
+
             font-size: 4rem;
+
             font-weight: 800;
-            margin-top: 0px;
+
+            margin-top: 0;
+
             margin-bottom: 5px;
+
             color: #10b981;
+
             display: inline-block;
+
         }
+
 
         .hero h2 {
+
             font-size: 1.1rem;
+
             color: var(--text-muted);
+
             margin-bottom: 30px;
+
             font-weight: 400;
+
         }
+
 
         .actions-container {
+
             display: flex;
+
             flex-direction: column;
+
             gap: 15px;
+
             width: 100%;
+
             max-width: 500px;
+
             margin: 0 auto;
+
         }
+
 
         .action-card {
+
             display: flex;
+
             align-items: center;
+
             justify-content: space-between;
+
             padding: 18px 25px;
+
             background: var(--card-bg);
+
             border: 1px solid rgba(16, 185, 129, 0.25);
+
             border-radius: 16px;
+
             color: white;
+
             text-decoration: none;
+
             font-weight: 600;
+
             transition: all 0.3s ease;
+
             cursor: pointer;
+
         }
+
 
         .action-card:hover {
+
             border-color: var(--accent-color);
+
             transform: translateY(-3px);
+
             box-shadow: 0 8px 25px rgba(4, 33, 18, 0.5);
+
         }
-        
+
+
         .card-left {
+
             display: flex;
+
             align-items: center;
+
             gap: 15px;
+
         }
+
 
         .card-left i {
+
             color: var(--accent-color);
+
             font-size: 1.2rem;
+
         }
+
+
+        /* أيقونة مدمجة للهاتف + التلفاز */
+
+        .device-icons {
+
+            position: relative;
+
+            width: 42px;
+
+            height: 30px;
+
+            display: inline-block;
+
+            flex-shrink: 0;
+
+        }
+
+
+        .device-icons .phone-icon {
+
+            position: absolute;
+
+            right: 0;
+
+            bottom: 0;
+
+            font-size: 1.25rem;
+
+            z-index: 2;
+
+            color: var(--accent-color);
+
+        }
+
+
+        .device-icons .tv-icon {
+
+            position: absolute;
+
+            left: 0;
+
+            top: 0;
+
+            font-size: 1.2rem;
+
+            color: var(--accent-color);
+
+            opacity: 0.85;
+
+        }
+
 
         .version-tag {
+
             font-size: 0.7rem;
+
             background: rgba(16, 185, 129, 0.1);
+
             color: #10b981;
+
             padding: 4px 10px;
+
             border-radius: 8px;
+
             font-family: sans-serif;
+
             border: 1px solid rgba(16, 185, 129, 0.3);
+
             white-space: nowrap;
+
             margin-right: 10px;
+
         }
 
-        .downloader-section { 
-            background: var(--card-bg); 
-            padding: 25px; 
-            border-radius: 16px; 
-            margin: 20px 0; 
-            border: 2px dashed rgba(16, 185, 129, 0.4); 
-            text-align: center; 
-            cursor: pointer; 
-            transition: 0.3s; 
-            width: 100%; 
-            max-width: 500px; 
+
+        .downloader-section {
+
+            background: var(--card-bg);
+
+            padding: 25px;
+
+            border-radius: 16px;
+
+            margin: 20px 0;
+
+            border: 2px dashed rgba(16, 185, 129, 0.4);
+
+            text-align: center;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+
+            width: 100%;
+
+            max-width: 500px;
+
         }
+
 
         .downloader-section:hover {
+
             background: #02120a;
+
             border-color: var(--accent-color);
+
         }
+
 
         .code-badge {
+
             color: var(--accent-color);
+
             font-size: 2rem;
+
             font-weight: 800;
+
             display: block;
+
             margin-top: 5px;
+
         }
+
 
         .features-section {
+
             width: 100%;
+
             max-width: 900px;
+
             padding: 40px 20px;
+
         }
+
 
         .section-title {
+
             text-align: center;
+
             margin-bottom: 40px;
+
             font-size: 2rem;
+
             color: var(--accent-color);
+
         }
+
 
         .features-grid {
+
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+            grid-template-columns: repeat(
+                auto-fit,
+                minmax(250px, 1fr)
+            );
+
             gap: 20px;
+
         }
 
-        .feature-box { 
-            background: var(--card-bg); 
-            padding: 30px; 
-            border-radius: 20px; 
-            text-align: center; 
-            transition: 0.3s; 
-            border: 1px solid rgba(16, 185, 129, 0.15); 
+
+        .feature-box {
+
+            background: var(--card-bg);
+
+            padding: 30px;
+
+            border-radius: 20px;
+
+            text-align: center;
+
+            transition: 0.3s;
+
+            border: 1px solid rgba(16, 185, 129, 0.15);
+
         }
+
 
         .feature-box:hover {
+
             border-color: var(--accent-color);
+
             transform: translateY(-5px);
+
         }
+
 
         .feature-box i {
+
             font-size: 2.5rem;
+
             color: var(--accent-color);
+
             margin-bottom: 15px;
+
         }
+
 
         footer {
+
             padding: 40px;
+
             color: var(--text-muted);
+
             font-size: 0.9rem;
+
             text-align: center;
+
             width: 100%;
+
         }
 
-        /* تحسين العرض على الهواتف */
+
+        /* تحسين الهاتف */
+
         @media (max-width: 600px) {
+
             .gradient-title {
+
                 font-size: 3rem;
+
             }
+
 
             .hero h2 {
+
                 font-size: 1rem;
+
             }
+
 
             .action-card {
+
                 padding: 16px 18px;
+
             }
+
 
             .card-left {
+
                 gap: 10px;
+
                 font-size: 0.9rem;
+
             }
 
+
             .version-tag {
+
                 font-size: 0.65rem;
+
                 padding: 4px 8px;
+
             }
+
+
+            .device-icons {
+
+                width: 38px;
+
+                height: 28px;
+
+            }
+
         }
+
     </style>
 </head>
 
+
 <body>
+
 
     <header class="hero">
 
-        <div class="logo-wrapper">
-            <img src="https://l.top4top.io/p_3819hsuay0.png" alt="GO TV MAX Logo" class="top-logo">
-        </div>
-        
-        <h1 class="gradient-title">GO TV MAX</h1>
 
-        <h2>حمل التطبيق وشاهد مبارياتك أينما كنت</h2>
-        
+        <!-- الشعار -->
+
+        <div class="logo-wrapper">
+
+            <img
+                src="https://l.top4top.io/p_3819hsuay0.png"
+                alt="GO TV MAX Logo"
+                class="top-logo"
+            >
+
+        </div>
+
+
+        <!-- العنوان -->
+
+        <h1 class="gradient-title">
+            GO TV MAX
+        </h1>
+
+
+        <h2>
+            حمل التطبيق وشاهد مبارياتك أينما كنت
+        </h2>
+
+
         <div class="actions-container">
 
-            <!-- نسخة الهواتف والشاشات و TV BOX -->
+
+            <!-- تحميل التطبيق -->
+
             <button
                 class="action-card"
                 onclick="startSilentDownload('https://github.com/Rahomi1/my-iptv-list/releases/download/1.1.2v/GO_TV_MAX_1.0.2v.apk')"
             >
+
                 <div class="card-left">
-                    <i class="fa-solid fa-mobile-screen-button"></i>
-                    <span>نسخة الهواتف/الشاشات والTV BOX</span>
+
+                    <!-- أيقونة هاتف + تلفاز -->
+
+                    <span class="device-icons">
+
+                        <i class="fa-solid fa-tv tv-icon"></i>
+
+                        <i class="fa-solid fa-mobile-screen-button phone-icon"></i>
+
+                    </span>
+
+
+                    <span>
+                        تحميل آخر أصدار لأجهزة الأندرويد
+                    </span>
+
                 </div>
 
-                <span class="version-tag">1.1.2v</span>
+
+                <span class="version-tag">
+                    1.1.2v
+                </span>
+
             </button>
 
+
             <!-- المشاهدة للأيفون -->
+
             <a
                 href="https://rahomi1.github.io/Rahomi.TV/"
                 target="_blank"
                 class="action-card"
             >
+
                 <div class="card-left">
+
                     <i class="fa-brands fa-apple"></i>
-                    <span>المشاهدة للأيفون</span>
+
+                    <span>
+                        المشاهدة للأيفون
+                    </span>
+
                 </div>
 
-                <span class="version-tag">WEB</span>
+
+                <span class="version-tag">
+                    WEB
+                </span>
+
             </a>
 
+
             <!-- التلكرام -->
+
             <a
                 href="https://t.me/GOTV_RI"
                 target="_blank"
                 class="action-card"
             >
+
                 <div class="card-left">
+
                     <i class="fa-brands fa-telegram"></i>
-                    <span>تابعنا على التلكرام</span>
+
+                    <span>
+                        تابعنا على التلكرام
+                    </span>
+
                 </div>
 
-                <span class="version-tag">JOIN</span>
+
+                <span class="version-tag">
+                    JOIN
+                </span>
+
             </a>
+
 
         </div>
 
-        <!-- Downloader Code -->
-        <div class="downloader-section" onclick="copyCode('1438131')">
 
-            <p>كود التنزيل السريع (Downloader)</p>
+        <!-- كود Downloader -->
 
-            <span class="code-badge" id="code-text">1438131</span>
+        <div
+            class="downloader-section"
+            onclick="copyCode('1438131')"
+        >
+
+            <p>
+                كود التنزيل السريع (Downloader)
+            </p>
+
+
+            <span
+                class="code-badge"
+                id="code-text"
+            >
+                1438131
+            </span>
+
 
             <small style="color:var(--text-muted)">
                 اضغط على الرقم للنسخ
@@ -304,25 +639,34 @@
 
         </div>
 
+
     </header>
 
 
     <!-- المميزات -->
+
     <section class="features-section">
+
 
         <h3 class="section-title">
             لماذا GO TV MAX ؟
         </h3>
 
+
         <div class="features-grid">
+
+
+            <!-- الميزة الأولى -->
 
             <div class="feature-box">
 
                 <i class="fa-solid fa-bolt"></i>
 
+
                 <h3 style="color: white; margin-bottom: 10px;">
                     سريع ومستقر
                 </h3>
+
 
                 <p>
                     نستخدم أحدث السيرفرات العالمية لضمان تجربة مشاهدة سلسة بدون تقطيع أو تأخير.
@@ -331,13 +675,17 @@
             </div>
 
 
+            <!-- الميزة الثانية -->
+
             <div class="feature-box">
 
                 <i class="fa-solid fa-layer-group"></i>
 
+
                 <h3 style="color: white; margin-bottom: 10px;">
                     قنوات لا حصر لها
                 </h3>
+
 
                 <p>
                     آلاف القنوات العربية والعالمية، الرياضية والترفيهية بجودات متعددة تناسب جميع السرعات.
@@ -346,13 +694,17 @@
             </div>
 
 
+            <!-- الميزة الثالثة -->
+
             <div class="feature-box">
 
                 <i class="fa-solid fa-headset"></i>
 
+
                 <h3 style="color: white; margin-bottom: 10px;">
                     دعم فني متواصل
                 </h3>
+
 
                 <p>
                     فريقنا متواجد دائماً لحل أي مشكلة قد تواجهك لضمان أفضل تجربة استخدام.
@@ -360,10 +712,13 @@
 
             </div>
 
+
         </div>
 
     </section>
 
+
+    <!-- الفوتر -->
 
     <footer>
 
@@ -376,6 +731,9 @@
 
     <script>
 
+
+        /* تحميل التطبيق */
+
         function startSilentDownload(fileUrl) {
 
             const iframe = document.createElement('iframe');
@@ -386,24 +744,95 @@
 
             document.body.appendChild(iframe);
 
+
             setTimeout(() => {
-                document.body.removeChild(iframe);
+
+                if (iframe.parentNode) {
+
+                    document.body.removeChild(iframe);
+
+                }
+
             }, 10000);
 
         }
 
 
+        /* نسخ كود Downloader */
+
         function copyCode(code) {
 
-            navigator.clipboard.writeText(code).then(() => {
+            if (
+                navigator.clipboard &&
+                window.isSecureContext
+            ) {
 
-                alert("تم نسخ الكود بنجاح: " + code);
+                navigator.clipboard.writeText(code)
+                    .then(() => {
 
-            });
+                        alert(
+                            "تم نسخ الكود بنجاح: " + code
+                        );
+
+                    })
+                    .catch(() => {
+
+                        fallbackCopy(code);
+
+                    });
+
+            } else {
+
+                fallbackCopy(code);
+
+            }
+
+        }
+
+
+        /* طريقة بديلة للنسخ */
+
+        function fallbackCopy(text) {
+
+            const textarea =
+                document.createElement("textarea");
+
+            textarea.value = text;
+
+            textarea.style.position = "fixed";
+
+            textarea.style.opacity = "0";
+
+            document.body.appendChild(textarea);
+
+            textarea.focus();
+
+            textarea.select();
+
+
+            try {
+
+                document.execCommand("copy");
+
+                alert(
+                    "تم نسخ الكود بنجاح: " + text
+                );
+
+            } catch (error) {
+
+                alert(
+                    "تعذر نسخ الكود، يرجى نسخه يدوياً: " + text
+                );
+
+            }
+
+
+            document.body.removeChild(textarea);
 
         }
 
     </script>
+
 
 </body>
 </html>
